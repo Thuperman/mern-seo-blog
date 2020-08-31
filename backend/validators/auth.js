@@ -10,5 +10,5 @@ exports.signupValidator = [
         .withMessage('Email is required'),
     check('password')
         .isLength({min: 6})
-        .withMessage('Password must be 6 characters or greater.'),
+        .withMessage('Password must be 6 characters or greater.')
 ];

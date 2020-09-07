@@ -6,10 +6,9 @@ const express = require('express'),
       mongoose = require('mongoose'),
       blogRoutes = require('./routes/blog'),
       authRoutes = require('./routes/auth');
+    //   { requireSignin } = require('./controllers/auth');
+      require('dotenv').config();
 
-require('dotenv').config();
-//test
-//app
 const app = express();
 
 //db
@@ -32,7 +31,10 @@ mongoose
 ╚██████╗╚██████╔╝██║ ╚████║██║ ╚████║███████╗╚██████╗   ██║   ███████╗██████╔╝
  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═╝   ╚══════╝╚═════╝`
 
-   ));
+   ))
+   .catch(err => {
+       console.log(err)
+   });
 
 
 //middlewares
